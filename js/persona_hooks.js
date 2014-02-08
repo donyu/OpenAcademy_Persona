@@ -34,7 +34,7 @@
 					var vars, url, queryPos, fragPos, hash, q, title, lowercaseTitle;
 
 					console.log( 'Persona login result:', data );
-					vars = [];
+					vars = {};
 					url = document.URL;
 					queryPos = url.indexOf( '?' ) + 1;
 					fragPos = url.indexOf( '#', queryPos );
@@ -45,7 +45,7 @@
 							hash = q[i].split( '=' );
 							vars[hash[0]] = decodeURIComponent( hash[1] ).replace( '+', ' ' );
 						}
-					} else {
+					} else 	{
 						vars = {};
 					}
 
